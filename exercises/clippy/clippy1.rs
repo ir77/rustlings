@@ -5,10 +5,9 @@
 // Execute `rustlings hint clippy1` for hints :)
 
 fn main() {
-    let x = 1.2331f64;
+    let x = 1.2332f64;
     let y = 1.2332f64;
-    if (y - x) > 0.0 {
-        // うーん、ここで何が求められているのかピン来なかった
+    if (y - x).abs() > 0.0 {
         println!("Success!");
     }
 }

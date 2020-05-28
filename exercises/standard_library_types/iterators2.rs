@@ -5,8 +5,6 @@
 // Step 3. Apply the `capitalize_first` function again to a list, but try and ensure it returns a single string
 // As always, there are hints if you execute `rustlings hint iterators2`!
 
-// I AM NOT DONE
-
 pub fn capitalize_first(input: &str) -> String {
     let mut c = input.chars();
     match c.next() {
@@ -34,7 +32,8 @@ pub fn capitalize_first3(input: Vec<&str>) -> String {
             None => String::new(),
             Some(first) => first.to_uppercase().collect::<String>() + c.as_str(),
         })
-        .fold("".to_string(), |a, b| a + &b)
+        .collect::<String>()
+    // .fold("".to_string(), |a, b| a + &b)
 }
 
 #[cfg(test)]
